@@ -150,13 +150,6 @@ header .headerTop {
     padding: 15px 0;
 }
 
-header .headerBottom .container,
-header .headerTop .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 header .headerTop .container .headerTopLeft ul {
     display: flex;
     gap: 15px;
@@ -165,16 +158,42 @@ header .headerTop .container .headerTopLeft ul {
 header .headerTop .container .headerTopRight {
     display: flex;
     justify-content: flex-end;
-    align-items: center;
+    gap: 15px;
+}
+
+header .headerTop .container .headerTopRight .lang,
+header .headerTop .container .headerTopRight .currencys {
+    display: flex;
+    align-items: flex-end;
 }
 
 header .headerTop .container .headerTopLeft li,
-header .headerTop .container .headerTopRight li {
+header .headerTop .container .headerTopRight select {
     cursor: pointer;
 }
 
-header .headerBottom {
+header .headerTop .container .headerTopRight select {
+    background-color: unset;
+    border: 0;
+    outline: none;
+    color: var(--white-color);
+}
+
+header .headerTop .container .headerTopRight select option {
+    background-color: var(--black-color);
+    border: 0;
+    outline: none;
+    color: var(--white-color);
+}
+
+header .headerTop .container .headerTopRight select {
+    background-color: unset;
+    border: 0;
+}
+
+header .headerBottom .row {
     padding: 25px 0;
+    align-items: center;
 }
 
 header .headerBottom .headerBottomLeft a {
@@ -194,6 +213,7 @@ header .headerBottom .headerBottomLeft span {
 
 header .headerBottom .headerBottomCenter ul {
     display: flex;
+    justify-content: center;
     gap: 22px;
 }
 
@@ -212,6 +232,7 @@ header .headerBottom .headerBottomCenter ul li a:hover {
 header .headerBottom .headerBottomRight ul {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     gap: 13px;
 }
 
@@ -413,6 +434,10 @@ header .headerBottom .headerBottomRight .myOrder {
     display: flex;
     align-items: center;
     gap: 5px;
+}
+
+.aboutUs .about .more:hover {
+    color: var(--main-color);
 }
 
 .aboutUs .food h2 {
@@ -760,6 +785,124 @@ header .headerBottom .headerBottomRight .myOrder {
 
 footer {
     background: #212121;
+    padding: 80px 0 50px;
+}
+
+footer .footerTop {
+    margin-bottom: 40px;
+}
+
+footer .footerTop .footerLogo {
+    color: var(--white-color);
+}
+
+footer .footerTop .footerLogo .logoo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+footer .footerTop .footerLogo .body {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 25px;
+}
+
+footer .footerTop .footerLogo .socail ul {
+    display: flex;
+    gap: 18px;
+}
+
+footer .footerTop h2 {
+    color: var(--white-color);
+    margin: 0 0 27px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 10px;
+    text-transform: uppercase;
+}
+
+footer .footerTop .footerCategory ul li,
+footer .footerTop .footerMenu ul li {
+    display: block;
+    margin-bottom: 11px;
+}
+
+footer .footerTop .footerCategory ul li a,
+footer .footerTop .footerMenu ul li a {
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--white-color);
+}
+
+footer .footerTop .footerCategory ul li a:hover,
+footer .footerTop .footerMenu ul li a:hover {
+    color: var(--main-color);
+}
+
+footer .footerTop .footerSubscribe form {
+    display: flex;
+    gap: 11px;
+}
+
+footer .footerTop .footerSubscribe form input {
+    border-radius: 5px;
+    background: var(--white-color);
+    padding: 18px 28px;
+    border: 0;
+    outline: none;
+}
+
+footer .footerTop .footerSubscribe form button {
+    color: var(--white-color);
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 600;
+    padding: 16px 20px;
+    border-radius: 5px;
+    background-color: var(--main-color);
+    border: 0;
+    outline: none;
+    transition: all 0.3s;
+}
+
+footer .footerTop .footerSubscribe form button:hover {
+    background-color: var(--white-color);
+    color: var(--main-color);
+    transition: all 0.3s;
+}
+
+footer .footerTop .footerSubscribe .payment {
+    display: flex;
+    gap: 9px;
+    margin-top: 30px;
+}
+
+footer .footerBottom {
+    color: var(--white-color);
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+footer .footerBottom .footerCopyright {
+    text-align: end;
+}
+
+footer .footerBottom a {
+    color: var(--white-color);
+}
+
+footer .footerBottom a:hover {
+    color: var(--main-color);
 }
 
 /* ========= Footer ======== */
