@@ -222,6 +222,11 @@
         left: -20px;
     }
 
+    .searchForm .closed{
+        margin-bottom: 15px;
+        position: unset;
+    }
+
     footer .footerTop .footerSubscribe form {
         flex-direction: column;
     }
