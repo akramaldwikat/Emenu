@@ -236,7 +236,7 @@ header .headerBottom .headerBottomRight ul {
     gap: 13px;
 }
 
-header .headerBottom .headerBottomRight .Search a {
+header .headerBottom .headerBottomRight .Search span {
     font-size: 15px;
     font-weight: 500;
     cursor: pointer;
