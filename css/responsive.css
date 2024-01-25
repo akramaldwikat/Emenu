@@ -191,6 +191,33 @@
         width: 100%;
     }
 
+    .aboutUs .about .count {
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    .aboutUs .about .count fieldset {
+        width: 100%;
+        text-align: center;
+    }
+
+    .aboutUs .about .count .image::after {
+        content: "";
+        width: 68px;
+        height: 68px;
+        border-radius: 50px;
+        background-color: #EFE9DA;
+        position: absolute;
+        left: -10px;
+        top: -10px;
+        z-index: -1;
+    }
+
+    .aboutUs .about .count fieldset:last-child .image::after {
+        left: -20px;
+    }
+
     footer .footerTop .footerSubscribe form {
         flex-direction: column;
     }
