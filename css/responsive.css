@@ -1,0 +1,198 @@
+/************************************900px*********************************************/
+@media (max-width: 1024px) {
+
+    header .headerTop .container .headerTopRight {
+        justify-content: center;
+    }
+
+    header .headerTop .container .headerTopLeft ul {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+
+    header .headerBottom .headerBottomLeft a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        font-size: 28px;
+        font-weight: 700;
+        justify-content: center;
+    }
+
+    header .headerBottom .headerBottomCenter {
+        margin: 15px 0;
+    }
+
+    header .headerBottom .headerBottomRight ul {
+        justify-content: center;
+    }
+
+    .aboutUs {
+        position: relative;
+        padding: 50px 0;
+    }
+
+    .aboutUs .image {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .aboutUs .about {
+        float: right;
+        width: 100%;
+    }
+
+    .aboutUs .food h2 {
+        font-size: 45px;
+        font-family: var(--font-bold);
+        color: var(--main-color);
+        rotate: 90deg;
+        position: absolute;
+        left: -10%;
+        top: 20%;
+    }
+
+    .aboutUs .about .title {
+        width: 100%;
+    }
+
+    .aboutUs .about .image {
+        width: auto;
+    }
+
+    .aboutUs .about .count .image::after {
+        left: -25px;
+    }
+
+    .whyUs .group {
+        padding-left: 0;
+        display: inline-block;
+        width: 100%;
+        padding: 45px 0;
+        padding-bottom: 15px;
+        text-align: center;
+    }
+
+    .whyUs .group .subGroup {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .whyUs .group fieldset {
+        width: 45%;
+    }
+
+    .whyUs .group .container {
+        max-width: 100%;
+        width: 98% !important;
+        margin: 0 auto;
+    }
+
+    .whyUs .image {
+        float: right;
+        width: 100%;
+    }
+
+    .whyUs .image img {
+        height: 440px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .whyUs .burger {
+        display: none;
+    }
+
+    .news,
+    .ourMenu {
+        padding: 50px 0;
+        position: relative;
+    }
+
+    footer .footerTop .footerLogo {
+        text-align: center;
+    }
+
+    footer .footerTop .footerSubscribe .payment,
+    footer .footerTop .footerSubscribe form,
+    footer .footerTop .footerLogo .socail ul,
+    footer .footerTop .footerLogo .logoo {
+        justify-content: center;
+    }
+
+    .footerMenu {
+        margin: 35px 0;
+        text-align: center;
+    }
+
+    .footerOtherLink,
+    .footerCategory {
+        margin-bottom: 35px;
+        text-align: center;
+    }
+
+    footer .footerBottom .footerCopyright,
+    .footerCopyright,
+    .footerSubscribe {
+        text-align: center;
+    }
+
+    .whyUs {
+        height: auto;
+    }
+
+}
+
+/************************************767px*********************************************/
+@media (max-width: 767px) {
+    header .headerBottom .headerBottomRight ul {
+        display: flex;
+        align-items: center;
+        gap: 13px;
+        flex-wrap: wrap;
+    }
+
+    .slider li.slide fieldset .container {
+        width: 94% !important;
+    }
+
+    .slider li.slide .content {
+        width: 25%;
+    }
+
+    .aboutUs .image img {
+        height: auto;
+    }
+
+    .aboutUs .food h2 {
+        display: none;
+    }
+
+    .whyUs .group .subGroup {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .whyUs .group fieldset {
+        width: 100%;
+    }
+
+    .whyUs .group .title {
+        font-size: 38px;
+    }
+
+    .news .new img {
+        width: 100%;
+    }
+
+    footer .footerTop .footerSubscribe form {
+        flex-direction: column;
+    }
+
+}
