@@ -150,6 +150,10 @@ header .headerTop {
     padding: 15px 0;
 }
 
+header .headerTop .row{
+    align-items: center;
+}
+
 header .headerTop .container .headerTopLeft ul {
     display: flex;
     gap: 15px;
