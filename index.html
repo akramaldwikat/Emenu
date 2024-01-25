@@ -9,6 +9,7 @@
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/responsive.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/layout.css">
 </head>
@@ -18,7 +19,7 @@
         <div class="headerTop">
             <div class="container no-padding">
                 <div class="row">
-                    <div class="headerTopLeft col-md-6 col-sm-6 col-xs-12">
+                    <div class="headerTopLeft col-md-6 col-sm-12 col-xs-12">
                         <ul class="social">
                             <li><a href="#"><img src="./images/fb.png" alt="facebookIcon"></a></li>
                             <li><a href="#"><img src="./images/insta.png" alt="instagramIcon"></a></li>
@@ -26,8 +27,8 @@
                             <li><a href="#"><img src="./images/yt.png" alt="youtubeIcone"></a></li>
                         </ul>
                     </div>
-                    <div class="headerTopRight col-md-6 col-sm-6 col-xs-12">
-                        <div class="currencys">
+                    <div class="headerTopRight col-md-6 col-sm-12 col-xs-12">
+                        <div class="currencys  custom-select">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <g clip-path="url(#clip0_1_262)">
                                     <path d="M0.375 9.75H24V15H0.375V9.75Z" fill="#E6E7E8"/>
@@ -42,13 +43,22 @@
                                     </clipPath>
                                 </defs>
                             </svg>
-                            <select id="currencys">
-                                <option class="currency" id="jod">JOD</option>
-                                <option class="currency" id="usd">USD</option>
-                            </select>
+                            <!-- <select id="currencys" class="form-select form-select-lg">
+                                <option class="currency opt" id="jod">JOD</option>
+                                <option class="currency opt" id="usd">USD</option>
+                            </select> -->
+                            <div class="dropdown">
+                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    currency
+                                </button>
+                                <div class="dropdown-menu"  id="currencys" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item currency" href="#">JOD</a>
+                                    <a class="dropdown-item currency" href="#">USD</a>
+                                </div>
+                            </div>
                         </div>
     
-                        <div class="lang">
+                        <div class="lang custom-select">
                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
                                 <g clip-path="url(#clip0_1_254)">
                                     <path d="M16.2176 11C16.215 10.1783 16.1269 9.35907 15.9548 8.55557H18.1548C18.0415 8.22042 17.9047 7.89368 17.7453 7.5778H15.6981C15.3133 6.29205 14.7163 5.07963 13.932 3.99057C13.4309 3.77986 12.9084 3.62414 12.3737 3.52613C13.4482 4.68067 14.2593 6.05472 14.7509 7.55335H11.457V3.42224H10.5403V7.55946H7.24644C7.73904 6.05811 8.55228 4.68186 9.62977 3.52613C9.09736 3.6225 8.57692 3.77617 8.07755 3.98446C7.29011 5.06895 6.68908 6.2772 6.29922 7.55946H4.23977C4.07757 7.88111 3.93869 8.21401 3.82422 8.55557H6.04255C5.87039 9.35907 5.78233 10.1783 5.77977 11C5.78146 11.8988 5.88396 12.7946 6.08533 13.6706H3.922C4.04842 14.0131 4.19956 14.346 4.37422 14.6667H6.34811C6.72224 15.8374 7.27688 16.9426 7.992 17.9422C8.50409 18.1619 9.03905 18.3238 9.587 18.425C8.58961 17.3371 7.82257 16.0587 7.332 14.6667H10.5464V18.5411H11.4631V14.6667H14.6653C14.1731 16.0593 13.4039 17.3377 12.4042 18.425C12.9547 18.3203 13.4918 18.1543 14.0053 17.93C14.7193 16.9341 15.2739 15.8332 15.6492 14.6667H17.6048C17.7786 14.352 17.9298 14.0252 18.057 13.6889H15.8876C16.0985 12.8079 16.2092 11.9059 16.2176 11ZM10.5403 13.6706H7.03255C6.60231 11.9887 6.58345 10.2279 6.97755 8.53724H10.5403V13.6706ZM14.9648 13.6706H11.457V8.55557H15.0198C15.1953 9.35841 15.2814 10.1782 15.2764 11C15.2814 11.8996 15.1768 12.7964 14.9648 13.6706Z" fill="white"/>
@@ -60,10 +70,20 @@
                                     </clipPath>
                                 </defs>
                             </svg>
-                            <select id="lang">
-                                <option id="en">English</option>
-                                <option id="en">Arabic</option>
-                            </select>
+                            <!-- <select id="lang">
+                                <option id="en" class="opt">English</option>
+                                <option id="en" class="opt">Arabic</option>
+                            </select> -->
+
+                            <div class="dropdown">
+                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    language
+                                </button>
+                                <div class="dropdown-menu" id="lang" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" id="en" href="#">English</a>
+                                    <a class="dropdown-item" id="ar" href="#">Arabic</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -72,13 +92,13 @@
         <div class="headerBottom">
             <div class="container no-padding">
                 <div class="row">
-                    <div class="headerBottomLeft col-md-3 col-sm-6 col-xs-12">
+                    <div class="headerBottomLeft col-md-3 col-sm-12 col-xs-12">
                         <a href="/">
                             <img src="./images/logo.png" alt="logoIcon">
                             <span>PHOENIX</span> FOOD
                         </a>
                     </div>
-                    <div class="headerBottomCenter col-md-4 col-sm-6 col-xs-12">
+                    <div class="headerBottomCenter col-md-4 col-sm-12 col-xs-12">
                         <ul class="mainMenu">
                             <li><a href="/">Home</a></li>
                             <li><a href="#">About</a></li>
@@ -87,7 +107,7 @@
                             <li><a href="#">Contact</a></li>
                         </ul>
                     </div>
-                    <div class="headerBottomRight col-md-5 col-sm-6 col-xs-12">
+                    <div class="headerBottomRight col-md-5 col-sm-12 col-xs-12">
                         <ul>
                             <li class="Search">
                                 <a href="#">
@@ -529,7 +549,78 @@
                         </div>
                     </div>
                 </li>
-
+                <li class="product">
+                    <div class="product">
+                        <div class="card">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item favItem">
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="23" viewBox="0 0 28 23" fill="none">
+                                            <path d="M8.15 1C4.20125 1 1 4.01302 1 7.72959C1 14.4592 9.45 20.577 14 22C18.55 20.577 27 14.4592 27 7.72959C27 4.01302 23.7987 1 19.85 1C17.432 1 15.2935 2.12996 14 3.85947C13.3407 2.97557 12.4648 2.25421 11.4465 1.75646C10.4282 1.25871 9.29744 0.999238 8.15 1Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                            <img src="./images/product_4.png" class="card-img-top" alt="product image">
+                            <div class="card-body">
+                                <h5 class="card-title">Spicy Burger Meal</h5>
+                                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry..</p>
+                            </div>
+                            <ul class="list-group list-group-flush addOrder">
+                                <li class="list-group-item">
+                                    <div class="addCart">
+                                        <a href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+                                            <path d="M4.36768 18.4512C3.42229 14.7271 2.9496 12.8661 3.94236 11.6139C4.93403 10.3617 6.88431 10.3617 10.7816 10.3617H15.8831C19.7815 10.3617 21.7296 10.3617 22.7223 11.6139C23.7151 12.865 23.2424 14.7282 22.297 18.4512C21.6954 20.8199 21.3957 22.0038 20.4988 22.6939C19.6019 23.383 18.3623 23.383 15.8831 23.383H10.7816C8.30239 23.383 7.06281 23.383 6.1659 22.6939C5.26899 22.0038 4.96819 20.8199 4.36768 18.4512Z" stroke="white" stroke-width="1.5"/>
+                                            <path d="M21.5981 10.9042L20.8158 8.07754C20.5139 6.98701 20.3629 6.44228 20.0533 6.03103C19.7446 5.62245 19.3253 5.3077 18.8435 5.1228C18.3586 4.93616 17.7857 4.93616 16.6398 4.93616M5.07031 10.9042L5.85263 8.07754C6.15453 6.98701 6.30549 6.44228 6.61511 6.03103C6.92382 5.62245 7.34309 5.3077 7.82494 5.1228C8.30976 4.93616 8.88272 4.93616 10.0286 4.93616" stroke="white" stroke-width="1.5"/>
+                                            <path d="M10.0273 4.93618C10.0273 4.64839 10.1434 4.37239 10.3501 4.16889C10.5567 3.9654 10.837 3.85107 11.1292 3.85107H15.5366C15.8288 3.85107 16.1091 3.9654 16.3157 4.16889C16.5224 4.37239 16.6385 4.64839 16.6385 4.93618C16.6385 5.22397 16.5224 5.49997 16.3157 5.70347C16.1091 5.90696 15.8288 6.02129 15.5366 6.02129H11.1292C10.837 6.02129 10.5567 5.90696 10.3501 5.70347C10.1434 5.49997 10.0273 5.22397 10.0273 4.93618Z" stroke="white" stroke-width="1.5"/>
+                                        </svg>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="price"><span id="prices">5.00</span> <span id="currency">JOD</span></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="product">
+                    <div class="product">
+                        <div class="card">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item favItem">
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="23" viewBox="0 0 28 23" fill="none">
+                                            <path d="M8.15 1C4.20125 1 1 4.01302 1 7.72959C1 14.4592 9.45 20.577 14 22C18.55 20.577 27 14.4592 27 7.72959C27 4.01302 23.7987 1 19.85 1C17.432 1 15.2935 2.12996 14 3.85947C13.3407 2.97557 12.4648 2.25421 11.4465 1.75646C10.4282 1.25871 9.29744 0.999238 8.15 1Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                            <img src="./images/product_4.png" class="card-img-top" alt="product image">
+                            <div class="card-body">
+                                <h5 class="card-title">Spicy Burger Meal</h5>
+                                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry..</p>
+                            </div>
+                            <ul class="list-group list-group-flush addOrder">
+                                <li class="list-group-item">
+                                    <div class="addCart">
+                                        <a href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+                                            <path d="M4.36768 18.4512C3.42229 14.7271 2.9496 12.8661 3.94236 11.6139C4.93403 10.3617 6.88431 10.3617 10.7816 10.3617H15.8831C19.7815 10.3617 21.7296 10.3617 22.7223 11.6139C23.7151 12.865 23.2424 14.7282 22.297 18.4512C21.6954 20.8199 21.3957 22.0038 20.4988 22.6939C19.6019 23.383 18.3623 23.383 15.8831 23.383H10.7816C8.30239 23.383 7.06281 23.383 6.1659 22.6939C5.26899 22.0038 4.96819 20.8199 4.36768 18.4512Z" stroke="white" stroke-width="1.5"/>
+                                            <path d="M21.5981 10.9042L20.8158 8.07754C20.5139 6.98701 20.3629 6.44228 20.0533 6.03103C19.7446 5.62245 19.3253 5.3077 18.8435 5.1228C18.3586 4.93616 17.7857 4.93616 16.6398 4.93616M5.07031 10.9042L5.85263 8.07754C6.15453 6.98701 6.30549 6.44228 6.61511 6.03103C6.92382 5.62245 7.34309 5.3077 7.82494 5.1228C8.30976 4.93616 8.88272 4.93616 10.0286 4.93616" stroke="white" stroke-width="1.5"/>
+                                            <path d="M10.0273 4.93618C10.0273 4.64839 10.1434 4.37239 10.3501 4.16889C10.5567 3.9654 10.837 3.85107 11.1292 3.85107H15.5366C15.8288 3.85107 16.1091 3.9654 16.3157 4.16889C16.5224 4.37239 16.6385 4.64839 16.6385 4.93618C16.6385 5.22397 16.5224 5.49997 16.3157 5.70347C16.1091 5.90696 15.8288 6.02129 15.5366 6.02129H11.1292C10.837 6.02129 10.5567 5.90696 10.3501 5.70347C10.1434 5.49997 10.0273 5.22397 10.0273 4.93618Z" stroke="white" stroke-width="1.5"/>
+                                        </svg>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="price"><span id="prices">5.00</span> <span id="currency">JOD</span></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
             </ul>
         </div>
     </section>
@@ -689,7 +780,7 @@
     <footer>
         <div class="container">
             <div class="footerTop row">
-                <div class="footerLogo col-md-4 col-sm-6 col-xs-12">
+                <div class="footerLogo col-md-4 col-sm-12 col-xs-12">
                     <div class="logoo">
                         <svg xmlns="http://www.w3.org/2000/svg" width="58" height="40" viewBox="0 0 58 40" fill="none">
                             <path d="M45.5257 21.8765H12.2599C11.7332 21.8765 11.3086 21.454 11.3086 20.93C11.3086 20.4059 11.7332 19.9834 12.2599 19.9834H45.5257C46.0523 19.9834 46.477 20.4059 46.477 20.93C46.477 21.454 46.0523 21.8765 45.5257 21.8765Z" fill="white"/>
@@ -761,7 +852,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="footerMenu col-md-2 col-sm-6 col-xs-12">
+                <div class="footerMenu col-md-2 col-sm-12 col-xs-12">
                     <h2>Quick links</h2>
                     <ul>
                         <li><a href="/">Home</a></li>
@@ -770,7 +861,7 @@
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </div>
-                <div class="footerCategory col-md-2 col-sm-6 col-xs-12">
+                <div class="footerCategory col-md-2 col-sm-12 col-xs-12">
                     <h2>Categories</h2>
                     <ul>
                         <li><a href="#">Burger</a></li>
@@ -779,7 +870,7 @@
                         <li><a href="#">Broasted</a></li>
                     </ul>
                 </div>
-                <div class="footerSubscribe col-md-4 col-sm-6 col-xs-12">
+                <div class="footerSubscribe col-md-4 col-sm-12 col-xs-12">
                     <h2>subscribe our newsletter</h2>
                     <form action="">
                         <input type="email" name="email" id="email" placeholder="Your Email">
@@ -805,7 +896,7 @@
                 </div>
             </div>
             <div class="footerBottom row">
-                <div class="footerOtherLink col-md-6 col-sm-6 col-xs-12">
+                <div class="footerOtherLink col-md-6 col-sm-12 col-xs-12">
                     <a href="#">
                         Privacy Policy
                     </a> - 
@@ -813,13 +904,27 @@
                         Terms & Conditions
                     </a>
                 </div>
-                <div class="footerCopyright col-md-6 col-sm-6 col-xs-12">
+                <div class="footerCopyright col-md-6 col-sm-12 col-xs-12">
                     <a href="#">Emenu.</a> All Rights Reserved
                 </div>
             </div>
         </div>
     </footer>
     <!-- Footer -->
+
+    <!-- Search form -->
+
+    <div class="searchForm">
+        <div class="closed">X</div>
+        <form action="">
+            <input type="text" name="search" id="search" placeholder="Type to Search...">
+            <button type="submit">
+                Search
+            </button>
+        </form>
+    </div>
+
+    <!-- Search form -->
 
     <script
     src="https://code.jquery.com/jquery-3.7.1.js"></script>
