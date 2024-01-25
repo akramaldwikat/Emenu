@@ -5,8 +5,15 @@ $(".slider #slider").slick({
     autoplay: true,
     autoplaySpeed: 3000,
     variableWidth: true,
-    // dots: false, Boolean
-    // arrows: false, Boolean
+    responsive: [
+        {
+            breakpoint: 480,
+            settings: {
+                dots: false,
+                arrows: false
+            }
+        }
+    ]
 });
 
 $(".news #newSlider").slick({
@@ -41,7 +48,6 @@ $(".news #newSlider").slick({
                 autoplay: true,
                 autoplaySpeed: 3000,
                 dots: true,
-
             }
         },
         {
@@ -53,7 +59,8 @@ $(".news #newSlider").slick({
                 slidesToScroll: 1,
                 autoplay: true,
                 autoplaySpeed: 3000,
-                dots: true,
+                dots: false,
+                arrows: false
             }
         }
     ]
@@ -103,7 +110,8 @@ $(".ourMenu #ourMenuSlider").slick({
                 slidesToScroll: 1,
                 autoplay: true,
                 autoplaySpeed: 3000,
-                dots: true,
+                dots: false,
+                arrows: false
             }
         }
     ]
